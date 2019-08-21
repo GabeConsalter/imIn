@@ -1,9 +1,13 @@
 #!/usr/bin/env node
 
-const program = require('commander');
+const program = require('commander'),
+	packageJson = require('./package.json');
 
 program
-	.command('version')
+	.version(packageJson.version);
+
+program
+	.command('hello')
 	.description('Hello to users')
 	.action(() => {
 		console.log('Hello Users!')
