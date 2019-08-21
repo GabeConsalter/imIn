@@ -1,0 +1,19 @@
+{
+  "name": "imin",
+  "version": "1.0.0",
+  "description": "A NodeJS script to an unauthorized SSH access for STUDY PURPOSE.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gabeconsalter@github.com/GabeConsalter/imIn.git"
+  },
+  "author": "GabeConsalter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabeConsalter/imIn/issues"
+  },
+  "homepage": "https://github.com/GabeConsalter/imIn#readme"
+}
