@@ -1,7 +1,9 @@
+#!/usr/bin/env node
+
 const program = require('commander');
 
 program
-	.command('hello')
+	.command('version')
 	.description('Hello to users')
 	.action(() => {
 		console.log('Hello Users!')

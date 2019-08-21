@@ -2,7 +2,7 @@
   "name": "imin",
   "version": "1.0.0",
   "description": "A NodeJS script to an unauthorized SSH access for STUDY PURPOSE.",
-  "main": "index.js",
+  "main": "imin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,7 @@
   "homepage": "https://github.com/GabeConsalter/imIn#readme",
   "dependencies": {
     "commander": "^3.0.0"
-  }
+  },
+  "preferGlobal": true,
+  "bin": "./imin.js"
 }
