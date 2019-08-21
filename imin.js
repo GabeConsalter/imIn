@@ -7,10 +7,10 @@ program
 	.version(packageJson.version);
 
 program
-	.command('scan <targetIP> <port>')
+	.command('scan <host> <port>')
 	.description('Scan a target to see port\'s status')
-	.action(async (targetIP, port) => {
-		console.log(`Port ${port} is ${await Scan.checkStatus(targetIP, port)}`);
+	.action(async (host, port) => {
+		console.log(`Port ${port} is ${await Scan.checkStatus(host, port)}`);
 	});
 
 program.parse(process.argv);

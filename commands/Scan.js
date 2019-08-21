@@ -1,8 +1,8 @@
 const net = require('net');
 
 const Scan = {
-	checkStatus: (targetIP, port) => {
-		console.log(`Scanning port ${port} in ${targetIP}...`);
+	checkStatus: (host, port) => {
+		console.log(`Scanning port ${port} in ${host}...`);
 		
 		return new Promise(resolve => {
 			const socket = new net.Socket();
@@ -19,7 +19,7 @@ const Scan = {
 				resolve('closed - TIMEOUT');
 			});
 
-			socket.connect(port, targetIP, () => {
+			socket.connect(port, host, () => {
 				socket.end();
 				resolve('open');
 			});
