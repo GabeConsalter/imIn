@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GabeConsalter/imIn/issues"
   },
-  "homepage": "https://github.com/GabeConsalter/imIn#readme"
+  "homepage": "https://github.com/GabeConsalter/imIn#readme",
+  "dependencies": {
+    "commander": "^3.0.0"
+  }
 }
