@@ -1,6 +1,6 @@
 {
   "name": "imin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A NodeJS script to an unauthorized SSH access for STUDY PURPOSE.",
   "main": "imin.js",
   "scripts": {
