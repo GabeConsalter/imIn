@@ -10,8 +10,10 @@ program
 program
 	.command('scan <host> <port>')
 	.description('Scan a target to see port\'s status')
-	.action(async (host, port) => {
-		console.log(`Port ${port} is ${await Scan.checkStatus(host, port)}`);
+	.action((host, port) => {
+		console.clear();
+		console.log(`Scanning port ${port} in ${host}...`);
+		setTimeout(async () => console.log(`Port ${port} is ${await Scan.checkStatus(host, port)}`), 500);
 	});
 
 program

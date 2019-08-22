@@ -2,8 +2,6 @@ const net = require('net');
 
 const Scan = {
 	checkStatus: (host, port) => {
-		console.log(`Scanning port ${port} in ${host}...`);
-		
 		return new Promise(resolve => {
 			const socket = new net.Socket();
 
