@@ -9,10 +9,11 @@ program
 
 program
 	.command('scan <host> <port>')
-	.description('Scan a target to see port\'s status')
+	.description('Scan a target host to verify the port status')
 	.action((host, port) => {
 		console.clear();
 		console.log(`Scanning port ${port} in ${host}...`);
+
 		setTimeout(async () => console.log(`Port ${port} is ${await Scan.checkStatus(host, port)}`), 500);
 	});
 
@@ -24,7 +25,7 @@ program
 		console.log(`Trying to access ${host} with dictionary combinations...`);
 
 		try {
-			dictionary = require(dictionary)
+			dictionary = require(dictionary);
 		} catch (error) {
 			if (error.code === 'MODULE_NOT_FOUND') {
 				console.log('Dictionary not found\nAborting');
@@ -38,9 +39,11 @@ program
 				.then(success => {
 					if (success) {
 						console.log(`I'm in!\nAuth:\n\tusername: ${phrase.username}\n\tpassword: ${phrase.password}`)
+
 						process.exit();
 					} else if (i === dictionary.length - 1) {
 						console.log(`I'm out!\nNone of the combinations worked`);
+						
 						process.exit();
 					}
 				});
