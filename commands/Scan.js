@@ -7,7 +7,7 @@ const Scan = {
 		return new Promise(resolve => {
 			const socket = new net.Socket();
 
-			socket.setTimeout(5000);
+			socket.setTimeout(20000);
 
 			socket.once('error', exception => {
 				socket.destroy();
