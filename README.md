@@ -1,4 +1,4 @@
-# imIn
+# I'm In!
 A NodeJS script to an unauthorized **SSH** access for **study purpose**.
 
 ## Installation
