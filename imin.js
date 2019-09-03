@@ -42,7 +42,7 @@ program
 
 						process.exit();
 					} else if (i === dictionary.length - 1) {
-						if (result.error.code === 'ENOPROTOOPT') {
+						if (result.error.code === 'EHOSTUNREACH') {
 							console.log(`Host not found!`);
 						} else {
 							console.log(`I'm out!\nNone of the combinations worked`);
