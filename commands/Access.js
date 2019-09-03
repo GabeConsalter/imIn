@@ -6,8 +6,8 @@ const Access = {
 
 		return new Promise(resolve => {
 			connection
-				.on('ready', () => resolve(true))
-				.on('error', () => resolve(false))
+				.on('ready', () => resolve({success: true}))
+				.on('error', error => resolve({success: false, error}))
 				.connect({ host, username, password });
 		});
 	}

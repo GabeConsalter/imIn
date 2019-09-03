@@ -36,13 +36,17 @@ program
 
 		dictionary.forEach(async (phrase, i) => {
 			await Access.try(host, phrase)
-				.then(success => {
-					if (success) {
+				.then(result => {
+					if (result.success) {
 						console.log(`I'm in!\nAuth:\n\tusername: ${phrase.username}\n\tpassword: ${phrase.password}`)
 
 						process.exit();
 					} else if (i === dictionary.length - 1) {
-						console.log(`I'm out!\nNone of the combinations worked`);
+						if (result.error.code === 'ENOPROTOOPT') {
+							console.log(`Host not found!`);
+						} else {
+							console.log(`I'm out!\nNone of the combinations worked`);
+						}
 						
 						process.exit();
 					}
